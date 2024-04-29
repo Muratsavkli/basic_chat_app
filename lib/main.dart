@@ -1,10 +1,17 @@
-import 'package:basic_chat_app/themes/light_mode.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import 'login_page.dart';
+import 'pages/login_page.dart';
+import 'themes/theme_provider.dart';
+
 
 void main() {
-  runApp(const MainApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MainApp(),
+    ),
+  );
 }
 
 class MainApp extends StatelessWidget {
@@ -15,7 +22,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
-      theme: lightMode,
+      theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }

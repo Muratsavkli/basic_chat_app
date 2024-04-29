@@ -6,7 +6,7 @@ import 'package:basic_chat_app/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 
 import 'chat_page.dart';
-import 'components/my_base_container_with_text.dart';
+import '../components/my_base_container_with_text.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({super.key});
@@ -63,6 +63,13 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: const Text('Chat Bot App'),
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          foregroundColor: Colors.grey,
+          elevation: 0,
+        ),
         backgroundColor: Theme.of(context).colorScheme.background,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,

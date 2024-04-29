@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:basic_chat_app/login_page.dart';
+import 'package:basic_chat_app/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
-import '../settings_page.dart';
+import '../pages/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
