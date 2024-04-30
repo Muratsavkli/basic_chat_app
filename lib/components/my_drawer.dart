@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:basic_chat_app/constants/app_constants.dart';
 import 'package:basic_chat_app/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class MyDrawer extends StatelessWidget {
               DrawerHeader(
                 child: Icon(
                   Icons.account_circle,
-                  size: 100,
+                  size: AppConstants.extraLargeIcon,
                   color: Colors.grey[600],
                 ),
               ),

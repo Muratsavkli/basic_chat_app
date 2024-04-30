@@ -3,6 +3,7 @@
 import 'package:basic_chat_app/components/my_button.dart';
 import 'package:basic_chat_app/components/sex_icon_touch.dart';
 import 'package:basic_chat_app/components/my_textfield.dart';
+import 'package:basic_chat_app/constants/app_constants.dart';
 import 'package:flutter/material.dart';
 
 import 'chat_page.dart';
@@ -76,28 +77,28 @@ class _LoginPageState extends State<LoginPage> {
           children: <Widget>[
             Icon(
               Icons.message,
-              size: 100,
+              size: AppConstants.extraLargeIcon,
               color: Color.fromARGB(255, 240, 166, 19),
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: AppConstants.smallPadding,),
             const Text(
               'Welcome to Basic Chat App',
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 24,
+                fontSize: AppConstants.defaultFont,
               ),
             ),
-            SizedBox(height: 25),
+            SizedBox(height: AppConstants.smallPadding,),
             MyTextField(
               hintText: "Enter Your Nick Name",
               controller: _userNicknameController,
             ),
-            SizedBox(height: 10),
+            SizedBox(height: AppConstants.smallPadding,),
             MyTextField(
               hintText: "Your age",
               controller: _userAgeController,
             ),
-            SizedBox(height: 10),
+            SizedBox(height: AppConstants.smallPadding,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
