@@ -6,9 +6,14 @@ import 'package:provider/provider.dart';
 
 import '../themes/theme_provider.dart';
 
-class SettingPage extends StatelessWidget {
+class SettingPage extends StatefulWidget {
   const SettingPage({super.key});
 
+  @override
+  State<SettingPage> createState() => _SettingPageState();
+}
+
+class _SettingPageState extends State<SettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +24,7 @@ class SettingPage extends StatelessWidget {
         foregroundColor: Colors.grey,
         elevation: 0,
       ),
-      body:Container(
+      body: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(12),
@@ -30,11 +35,16 @@ class SettingPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Dark Mode'),
-
-            //TODO: CupertinoSwitch or normal switch does not work properly with dark mode, check it.
             CupertinoSwitch(
               value: Provider.of<ThemeProvider>(context).isDarkMode,
-              onChanged: (value) => Provider.of<ThemeProvider>(context, listen: false).toggleTheme(),
+              onChanged: (value) {
+                setState(
+                  () {
+                    Provider.of<ThemeProvider>(context, listen: false).isDarkMode = value;
+                    Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+                  },
+                );
+              },
             ),
           ],
         ),
