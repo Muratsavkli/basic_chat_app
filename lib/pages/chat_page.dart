@@ -2,6 +2,7 @@
 
 import 'package:basic_chat_app/components/chat_buble.dart';
 import 'package:basic_chat_app/components/my_textfield.dart';
+import 'package:basic_chat_app/constants/app_constants.dart';
 import 'package:basic_chat_app/services/chat/chat_service.dart';
 import 'package:flutter/material.dart';
 
@@ -50,7 +51,7 @@ class _ChatPageState extends State<ChatPage> {
       ),
       drawer: MyDrawer(),
       body: Padding(
-        padding: const EdgeInsets.all(30.0),
+        padding: const EdgeInsets.all(AppConstants.largePadding),
         child: Column(
           children: <Widget>[
             //display messages

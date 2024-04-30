@@ -1,3 +1,4 @@
+import 'package:basic_chat_app/constants/app_constants.dart';
 import 'package:flutter/material.dart';
 
 class MyTextField extends StatelessWidget {
@@ -9,7 +10,7 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      padding: const EdgeInsets.symmetric(horizontal: AppConstants.defaultPadding),
       child: TextField(
         controller: controller,
         decoration: InputDecoration(

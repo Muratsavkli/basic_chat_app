@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:basic_chat_app/constants/app_constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -27,10 +28,10 @@ class _SettingPageState extends State<SettingPage> {
       body: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(AppConstants.smallRadius),
         ),
-        margin: EdgeInsets.all(25),
-        padding: EdgeInsets.all(16),
+        margin: EdgeInsets.all(AppConstants.largePadding),
+        padding: EdgeInsets.all(AppConstants.smallPadding),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

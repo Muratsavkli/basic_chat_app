@@ -1,3 +1,4 @@
+import 'package:basic_chat_app/constants/app_constants.dart';
 import 'package:flutter/material.dart';
 
 class ChatBubble extends StatelessWidget {
@@ -11,9 +12,9 @@ class ChatBubble extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: isMe ? Colors.green : Colors.grey,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(AppConstants.smallRadius),
       ),
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(AppConstants.smallPadding),
       margin: const EdgeInsets.symmetric(vertical: 3, horizontal: 25),
       child: Text(
         message,

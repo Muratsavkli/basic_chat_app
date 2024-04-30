@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
 
+import 'package:basic_chat_app/constants/app_constants.dart';
 import 'package:flutter/material.dart';
 
 class SexIconToTouch extends StatelessWidget {
@@ -14,9 +15,9 @@ class SexIconToTouch extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25.0),
+        padding: const EdgeInsets.symmetric(horizontal: AppConstants.defaultPadding),
         child:
-            Icon(icon, size: 50, color: color ?? Theme.of(context).colorScheme.primary),
+            Icon(icon, size: AppConstants.defaultIcon, color: color ?? Theme.of(context).colorScheme.primary),
       ),
     );
   }
